@@ -2,14 +2,18 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    user: null
-
+    user: null,
+    product: null
   },
  
   mutations: {
     setUser: (state, user) => {
       state.user = user  ;
+    },
+    setProduct: (state, product) => {
+      state.product= product  ;
     }
+
   },
   actions: {
     login: async (context, payload) => {
@@ -20,7 +24,14 @@ export default createStore({
 
       
      
+    },
+    ShowProducts: async (context) => {
+      fetch('http://localhost:3000/products')
+    .then((response) => response.json())
+    .then((product) => context.commit("setProduct",product))
+  
     }
+    
   },
   modules: {
   }

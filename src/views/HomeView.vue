@@ -16,13 +16,21 @@
   </div>
 </template>
 <script></script>
-<style>
+<style scoped>
+#container {
+  margin-top: -100px;
+  background-color: white;
+  height: 100vh;
+}
+.container {
+  padding-top: 50px;
+}
 .LG {
   margin-top: 100px;
   z-index: 150;
 }
 #controller {
-  margin-top: 70px;
+  margin-top: 150px;
   margin-left: 60px;
   width: 90vw;
   position: absolute;
@@ -31,14 +39,14 @@
   top: 40px;
   transform: rotate(20deg);
   margin-left: -380px;
-  filter: drop-shadow(20px 8px 8px #757585fa);
+  filter: drop-shadow(20px 8px 8px #343333fa);
 }
 #controller:hover {
   transform: rotate(365deg);
 }
 #logo1 {
   background: -webkit-linear-gradient(rgb(5, 202, 156), rgb(184, 14, 184));
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: serif;
   display: flex;
