@@ -1,15 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/admin">Admin</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/signUp">Sign Up</router-link> |
-    <router-link to="/cardview">Cards</router-link>
-  </nav>
+  <Navbar />
   <router-view />
 </template>
-
+<script>
+import Navbar from "./components/Navbar.vue";
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,6 +21,7 @@
 
 nav {
   padding: 30px;
+  background-color: black;
 }
 
 nav a {

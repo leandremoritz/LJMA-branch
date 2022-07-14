@@ -27,7 +27,8 @@ export default {
 </script>
 <style scoped>
 .everything {
-  color: black;
+  background-color: #000000 !important;
+  color: rgb(228, 226, 226);
 }
 #cards router-link {
   text-decoration: none;
@@ -190,6 +191,8 @@ span {
   margin-top: 3%;
   margin-right: auto;
   margin-left: auto;
+  background-color: #000000 !important;
+  color: grey;
   box-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 #cards2 {

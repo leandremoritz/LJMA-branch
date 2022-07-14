@@ -18,13 +18,15 @@ export default createStore({
   actions: {
     login: async (context, payload) => {
       const {email, password} = payload;
-      const response = await   fetch(`http://localhost:3000/users?email=${this.email}&password=${this.password}`);
+      const response = await   fetch(`http://localhost:3000/users?email=${email}&password=${password}`);
       const userData =await response.json();
       context.commit("setUser",userData[0]);
 
       
      
     },
+    
+ 
     ShowProducts: async (context) => {
       fetch('http://localhost:3000/products')
     .then((response) => response.json())

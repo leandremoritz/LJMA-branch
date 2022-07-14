@@ -1,7 +1,4 @@
 <template>
-  <!-- <div class="display"> -->
-  <!-- <Card v-for="product in products" :key="product.id" :product="product" />
-    <p><i class="fa-solid fa-horse-head"></i> {{ product.company }}</p> -->
   <div class="flex">
     <div id="body" v-for="product of product" :key="product.id">
       <div class="everything">
@@ -34,12 +31,6 @@ export default {
       return this.$store.state.product;
     },
   },
-  //   mounted() {
-  //     // fetch(" http://localhost:3000/products")
-  //     //   .then((res) => res.json())
-  //     //   .then((data) => (this.products = data))
-  //     //   .catch((err) => console.log(err.message));
-  //   },
 };
 </script>
 <style scoped>
